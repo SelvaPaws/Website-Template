@@ -1,0 +1,11 @@
+Options +FollowSymLinks
+#IndexIgnore */*
+
+# Turn on the RewriteEngine
+RewriteEngine On
+RewriteBase /
+
+#  Rules
+RewriteRule ^Settings\..+$ index.php?/$1 [L]
+RewriteCond %{REQUEST_URI} !\.(css|ico|js|png)$
+RewriteRule ^(.*)$ index.php?/$1 [L]

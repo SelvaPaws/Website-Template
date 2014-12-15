@@ -1,0 +1,1 @@
+<?phpfunction isAuthenticated($rank = 'guest') {	$allowedRanks = array('guest', 'user', 'moderator', 'admin', 'owner');	if (!in_array($rank, $allowedRanks))		raiseError(500);	// TODO define this yourself based on your user system	return True;}?>

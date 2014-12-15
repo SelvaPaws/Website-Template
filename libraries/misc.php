@@ -1,0 +1,1 @@
+<?phpfunction isset_r(array $array, $keys) {	foreach ($keys as $i) {		if (!isset($array[$i]))			return false;	}	return true;}?>
